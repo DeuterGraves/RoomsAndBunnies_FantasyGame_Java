@@ -1,4 +1,4 @@
 package RoomsAndBunnies.Enums;
 
-public class WizSpell {
+public enum WizSpell {
 }

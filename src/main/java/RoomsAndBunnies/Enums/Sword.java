@@ -1,4 +1,4 @@
 package RoomsAndBunnies.Enums;
 
-public enum Swords {
+public enum Sword {
 }

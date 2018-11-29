@@ -5,12 +5,12 @@ public abstract class Player {
 
     protected String name;
     protected String type;
-    protected int healthpoints;
+    protected int healthPoints;
 
-    public Player(String name, String type, int healthpoints){
+    public Player(String name, String type, int healthPoints){
         this.name = name;
         this.type = type;
-        this.healthpoints = healthpoints;
+        this.healthPoints = healthPoints;
     }
 
     public String getName(){
@@ -21,8 +21,8 @@ public abstract class Player {
         return this.type;
     }
 
-    public int getHealthpoints(){
-        return this.healthpoints;
+    public int getHealthPoints(){
+        return this.healthPoints;
     }
 
 
