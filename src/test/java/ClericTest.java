@@ -44,6 +44,6 @@ public class ClericTest {
 
     @Test
     public void potionHasAValue(){
-        assertEquals(20, cleric.getValueFromEnum());
+        assertEquals(20, cleric.getPotionValue());
     }
 }

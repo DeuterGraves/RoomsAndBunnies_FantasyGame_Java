@@ -21,7 +21,7 @@ public class Cleric extends Player {
         return this.treasury;
     }
 
-    public int getValueFromEnum(){
+    public int getPotionValue(){
         return this.potion.getPotionValue();
     }
 }
