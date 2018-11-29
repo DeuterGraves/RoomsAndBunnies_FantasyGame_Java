@@ -16,7 +16,7 @@ public class WizzardTest {
     public void before(){
         dragon = Dragon.BLUE;
         wizSpell = WizSpell.WIND;
-        wizzard = new Wizzard("Merlin", "Wizzard", 50, 0, wizSpell, dragon);
+        wizzard = new Wizzard("Merlin", 0, wizSpell, dragon);
     }
 
     @Test

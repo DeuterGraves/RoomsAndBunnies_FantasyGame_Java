@@ -8,12 +8,10 @@ public class Wizzard extends Magician {
     WizSpell wizSpell;
     Dragon dragon;
 
-    public Wizzard(String name, String type, int healthPoints, int treasury, WizSpell wizSpell, Dragon dragon){
-        super(name, type, healthPoints, treasury);
+    public Wizzard(String name, int treasury, WizSpell wizSpell, Dragon dragon){
+        super(name, "Wizzard", 200, treasury);
         this.wizSpell = wizSpell;
         this.dragon = dragon;
-//        this.type = "Wizzard";
-//        this.healthPoints = 5000;
     }
 
     public WizSpell getWizSpell(){
