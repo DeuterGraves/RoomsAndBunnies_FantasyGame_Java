@@ -27,7 +27,7 @@ public class DwarfTest {
     }
 
     @Test
-    public void barbaianraHasTreasury(){
+    public void dwarfHasTreasury(){
         assertEquals(0, dwarf.getTreasury());
     }
 
