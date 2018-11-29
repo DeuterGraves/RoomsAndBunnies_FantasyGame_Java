@@ -1,9 +1,10 @@
 package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Enums.Axe;
+import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
 
-public class Dwarf extends Warrior implements IDefend {
+public class Dwarf extends Warrior implements IDefend, IAttack {
 
     private Axe axe;
 
@@ -18,6 +19,12 @@ public class Dwarf extends Warrior implements IDefend {
 
     public int getAxeValue(){
         return this.axe.getAxeValue();
+    }
+
+    public void attack(IDefend iDefend){
+        int damage = axe.getAxeValue();
+        iDefend.defend(damage);
+
     }
 
     public void defend(int damage){

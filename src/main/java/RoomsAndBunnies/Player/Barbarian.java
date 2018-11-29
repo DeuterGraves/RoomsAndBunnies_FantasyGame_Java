@@ -4,7 +4,7 @@ import RoomsAndBunnies.Enums.Club;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
 
-public class Barbarian extends Warrior implements IAttack {
+public class Barbarian extends Warrior implements IAttack, IDefend {
 
     private Club club;
 
@@ -25,5 +25,11 @@ public class Barbarian extends Warrior implements IAttack {
         int damage = club.getClubValue();
         iDefend.defend(damage);
 
+    }
+
+    public void defend(int damage){
+        int healthHit = damage - getArmour();
+        int newHealth = getHealthPoints() - healthHit;
+        setHealthPoints(newHealth);
     }
 }

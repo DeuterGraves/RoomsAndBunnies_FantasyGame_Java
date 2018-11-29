@@ -2,8 +2,10 @@ package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Enums.Dragon;
 import RoomsAndBunnies.Enums.WizSpell;
+import RoomsAndBunnies.Interfaces.IAttack;
+import RoomsAndBunnies.Interfaces.IDefend;
 
-public class Wizzard extends Magician {
+public class Wizzard extends Magician implements IAttack, IDefend {
 
     WizSpell wizSpell;
     Dragon dragon;
@@ -29,4 +31,17 @@ public class Wizzard extends Magician {
     public int getWizSpellValue(){
         return this.wizSpell.getWizSpellValue();
     }
+
+
+    public void attack(IDefend iDefend){
+        int damage = dragon.getDragonValue();
+        iDefend.defend(damage);
+    }
+
+    public void defend(int damage){
+        int healthHit = damage - getDragonHealth();
+        int newHealth = getHealthPoints() - healthHit;
+        setHealthPoints(newHealth);
+    }
+
 }
