@@ -1,5 +1,7 @@
+import RoomsAndBunnies.Enums.Axe;
 import RoomsAndBunnies.Enums.Club;
 import RoomsAndBunnies.Player.Barbarian;
+import RoomsAndBunnies.Player.Dwarf;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,11 +12,15 @@ public class BarbarianTest {
 
     Club club;
     Barbarian barbarian;
+    Dwarf dwarf;
+    Axe axe;
 
     @Before
     public void before(){
         club = Club.NULLANULLA;
         barbarian = new Barbarian("Conan", 0, club);
+        axe = Axe.DANEAXE;
+        dwarf = new Dwarf("Red", 0, axe);
     }
 
     @Test
@@ -35,5 +41,12 @@ public class BarbarianTest {
     @Test
     public void barbarianHasName(){
         assertEquals("Conan", barbarian.getName());
+    }
+
+    @Test
+    public void canAttack(){
+//        assertEquals(600, barbarian.attack(dwarf));
+        barbarian.attack(dwarf);
+        assertEquals(-475, dwarf.getHealthPoints());
     }
 }

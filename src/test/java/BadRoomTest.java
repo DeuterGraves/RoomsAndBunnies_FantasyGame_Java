@@ -45,5 +45,5 @@ public class BadRoomTest {
         badRoom.setPlayer(barbarian);
         assertEquals(barbarian, badRoom.getPlayer());
     }
-    
+
 }

@@ -1,8 +1,9 @@
 package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Enums.Axe;
+import RoomsAndBunnies.Interfaces.IDefend;
 
-public class Dwarf extends Warrior {
+public class Dwarf extends Warrior implements IDefend {
 
     private Axe axe;
 
@@ -17,6 +18,12 @@ public class Dwarf extends Warrior {
 
     public int getAxeValue(){
         return this.axe.getAxeValue();
+    }
+
+    public void defend(int damage){
+        int healthHit = damage - getArmour();
+        int newHealth = getHealthPoints() - healthHit;
+        setHealthPoints(newHealth);
     }
 
 }

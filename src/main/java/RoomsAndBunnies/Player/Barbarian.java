@@ -1,8 +1,10 @@
 package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Enums.Club;
+import RoomsAndBunnies.Interfaces.IAttack;
+import RoomsAndBunnies.Interfaces.IDefend;
 
-public class Barbarian extends Warrior {
+public class Barbarian extends Warrior implements IAttack {
 
     private Club club;
 
@@ -17,5 +19,11 @@ public class Barbarian extends Warrior {
 
     public int getClubValue(){
         return this.club.getClubValue();
+    }
+
+    public void attack(IDefend iDefend){
+        int damage = club.getClubValue();
+        iDefend.defend(damage);
+
     }
 }
