@@ -23,7 +23,7 @@ public class KnightTest {
 
     @Test
     public void knightSwordHasValue(){
-        assertEquals(400, knight.getSwordValue());
+        assertEquals(60, knight.getSwordValue());
     }
 
     @Test

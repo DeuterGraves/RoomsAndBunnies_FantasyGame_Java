@@ -36,6 +36,6 @@ public class WizzardTest {
 
     @Test
     public void wizzardSpellValue(){
-        assertEquals(500, wizzard.getWizSpellValue());
+        assertEquals(50, wizzard.getWizSpellValue());
     }
 }

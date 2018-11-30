@@ -30,7 +30,7 @@ public class BarbarianTest {
 
     @Test
     public void barbarianClubHasValue(){
-        assertEquals(600, barbarian.getClubValue());
+        assertEquals(90, barbarian.getClubValue());
     }
 
     @Test
@@ -47,6 +47,6 @@ public class BarbarianTest {
     public void canAttack(){
 //        assertEquals(600, barbarian.attack(dwarf));
         barbarian.attack(dwarf);
-        assertEquals(-475, dwarf.getHealthPoints());
+        assertEquals(35, dwarf.getHealthPoints());
     }
 }

@@ -41,6 +41,6 @@ public class EnemyTest {
 
     @Test
     public void enemyWeaponHasAValue(){
-        assertEquals(1000, enemy.getEnemyWeaponValue());
+        assertEquals(100, enemy.getEnemyWeaponValue());
     }
 }

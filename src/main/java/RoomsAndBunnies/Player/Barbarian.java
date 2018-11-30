@@ -3,8 +3,9 @@ package RoomsAndBunnies.Player;
 import RoomsAndBunnies.Enums.Club;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IRecover;
 
-public class Barbarian extends Warrior implements IAttack, IDefend {
+public class Barbarian extends Warrior implements IAttack, IDefend, IRecover {
 
     private Club club;
 
@@ -32,4 +33,9 @@ public class Barbarian extends Warrior implements IAttack, IDefend {
         int newHealth = getHealthPoints() - healthHit;
         setHealthPoints(newHealth);
     }
+
+    public void recover(int recoverPoints){
+        this.healthPoints += recoverPoints;
+    }
+
 }

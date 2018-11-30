@@ -4,8 +4,9 @@ import RoomsAndBunnies.Enums.Dragon;
 import RoomsAndBunnies.Enums.WizSpell;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IRecover;
 
-public class Wizzard extends Magician implements IAttack, IDefend {
+public class Wizzard extends Magician implements IAttack, IDefend, IRecover {
 
     WizSpell wizSpell;
     Dragon dragon;
@@ -43,5 +44,11 @@ public class Wizzard extends Magician implements IAttack, IDefend {
         int newHealth = getHealthPoints() - healthHit;
         setHealthPoints(newHealth);
     }
+
+
+    public void recover(int recoverPoints){
+        this.healthPoints += recoverPoints;
+    }
+
 
 }

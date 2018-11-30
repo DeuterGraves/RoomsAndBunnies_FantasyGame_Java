@@ -4,8 +4,9 @@ import RoomsAndBunnies.Enums.Undead;
 import RoomsAndBunnies.Enums.WarSpell;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IRecover;
 
-public class Warlock extends Magician implements IAttack, IDefend {
+public class Warlock extends Magician implements IAttack, IDefend, IRecover {
 
     Undead undead;
     WarSpell warSpell;
@@ -42,6 +43,11 @@ public class Warlock extends Magician implements IAttack, IDefend {
         int healthHit = damage - getUndeadValue();
         int newHealth = getHealthPoints() - healthHit;
         setHealthPoints(newHealth);
+    }
+
+
+    public void recover(int recoverPoints){
+        this.healthPoints += recoverPoints;
     }
 
 

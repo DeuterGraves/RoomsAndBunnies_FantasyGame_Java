@@ -13,6 +13,7 @@ public class PlayerTest {
     Knight knight;
     Warlock warlock;
     Wizzard wizzard;
+    Cleric cleric;
 
     @Before
     public void before(){
@@ -28,9 +29,10 @@ public class PlayerTest {
         warlock = new Warlock("Donnie Darko", 400, Undead.ZOMBIE, WarSpell.EVILCURSE);
 //        wizard 200hp wind = 500 purple = 75
         wizzard = new Wizzard("Whiz Zard", 200, WizSpell.WIND, Dragon.PURPLE);
+        cleric = new Cleric("Maud", "Cleric", 300, Potion.POTION1, 150);
     }
 
-//    BATTLE!!!!
+    //    BATTLE!!!!
     @Test
 //    aka dwarf can be attaced.
     public void barbarianAttacksDwarf(){
@@ -81,12 +83,43 @@ public class PlayerTest {
 //        wind 50 + 75 125 damage -25
         assertEquals(-25, warlock.getHealthPoints());
     }
-/*
-wizard weapon = wind = 50
-warlock defence = -75
-warlock hp = 100
+    /*
+    wizard weapon = wind = 50
+    warlock defence = -75
+    warlock hp = 100
 
-50
+    50
 
-*/
+    */
+
+    @Test
+    public void clericCanHealBarbarian(){
+        cleric.heal(barbarian);
+        assertEquals(120, barbarian.getHealthPoints());
+    }
+
+    @Test
+    public void clericCanHealDwarf(){
+        cleric.heal(dwarf);
+        assertEquals(95, dwarf.getHealthPoints());
+    }
+
+    @Test
+    public void clericCanHealKnight(){
+        cleric.heal(knight);
+        assertEquals(95, knight.getHealthPoints());
+    }
+
+    @Test
+    public void clericCanHealWarlock(){
+        cleric.heal(warlock);
+        assertEquals(120, warlock.getHealthPoints());
+    }
+
+    @Test
+    public void clericCanHealWizard(){
+        cleric.heal(wizzard);
+        assertEquals(220, wizzard.getHealthPoints());
+    }
+
 }

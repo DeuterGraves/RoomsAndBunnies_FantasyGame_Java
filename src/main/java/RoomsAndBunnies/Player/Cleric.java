@@ -1,8 +1,11 @@
 package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Enums.Potion;
+import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IHeal;
+import RoomsAndBunnies.Interfaces.IRecover;
 
-public class Cleric extends Player {
+public class Cleric extends Player implements IHeal {
 
     private Potion potion;
     private int treasury;
@@ -23,5 +26,10 @@ public class Cleric extends Player {
 
     public int getPotionValue(){
         return this.potion.getPotionValue();
+    }
+
+    public void heal(IRecover iRecover){
+        int recoverPoints = potion.getPotionValue();
+        iRecover.recover(recoverPoints);
     }
 }

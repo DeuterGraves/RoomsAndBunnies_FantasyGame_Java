@@ -3,8 +3,9 @@ package RoomsAndBunnies.Player;
 import RoomsAndBunnies.Enums.Axe;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IRecover;
 
-public class Dwarf extends Warrior implements IDefend, IAttack {
+public class Dwarf extends Warrior implements IDefend, IAttack, IRecover {
 
     private Axe axe;
 
@@ -31,6 +32,10 @@ public class Dwarf extends Warrior implements IDefend, IAttack {
         int healthHit = damage - getArmour();
         int newHealth = getHealthPoints() - healthHit;
         setHealthPoints(newHealth);
+    }
+
+    public void recover(int recoverPoints){
+        this.healthPoints += recoverPoints;
     }
 
 }

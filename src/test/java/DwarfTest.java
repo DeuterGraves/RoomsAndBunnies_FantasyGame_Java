@@ -23,7 +23,7 @@ public class DwarfTest {
 
     @Test
     public void dwarfAxeHasValue(){
-        assertEquals(400, dwarf.getAxeValue());
+        assertEquals(70, dwarf.getAxeValue());
     }
 
     @Test
