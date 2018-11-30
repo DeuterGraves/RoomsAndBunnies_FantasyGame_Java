@@ -35,4 +35,11 @@ public class DwarfTest {
     public void dwarfHasName(){
         assertEquals("Red", dwarf.getName());
     }
+
+    @Test
+    public void dwarfCanAttack(){
+
+    }
 }
+
+

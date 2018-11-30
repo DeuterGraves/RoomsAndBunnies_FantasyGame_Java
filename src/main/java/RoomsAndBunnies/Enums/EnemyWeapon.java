@@ -1,9 +1,9 @@
 package RoomsAndBunnies.Enums;
 
 public enum EnemyWeapon {
-    LASSO(30),
-    HUGEHAMMER(50),
-    GUILLOTINE(1000);
+    LASSO(90),
+    HUGEHAMMER(90),
+    GUILLOTINE(100);
 
     private final int weaponValue;
 

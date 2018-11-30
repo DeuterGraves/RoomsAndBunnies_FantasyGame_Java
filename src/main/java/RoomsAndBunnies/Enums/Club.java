@@ -1,10 +1,10 @@
 package RoomsAndBunnies.Enums;
 
 public enum Club {
-    MACE(50),
-    AKLYS(100),
-    NULLANULLA(600),
-    TRUNCHEON(300);
+    MACE(80),
+    AKLYS(70),
+    NULLANULLA(90),
+    TRUNCHEON(60);
 
     private final int clubValue;
 

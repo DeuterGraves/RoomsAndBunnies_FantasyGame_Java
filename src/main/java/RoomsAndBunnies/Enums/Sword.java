@@ -1,10 +1,10 @@
 package RoomsAndBunnies.Enums;
 
 public enum Sword {
-    LONGSWORD(800),
+    LONGSWORD(80),
     DAGGER(50),
-    KNIGHTLYSWORD(400),
-    SCIMITAR(200);
+    KNIGHTLYSWORD(60),
+    SCIMITAR(70);
 
     private final int swordValue;
 

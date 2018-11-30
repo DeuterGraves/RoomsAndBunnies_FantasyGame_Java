@@ -1,9 +1,9 @@
 package RoomsAndBunnies.Enums;
 
 public enum WizSpell {
-    LIGHTNING(5000),
-    FREEZE(2000),
-    WIND(500);
+    LIGHTNING(70),
+    FREEZE(80),
+    WIND(50);
 
     private final int wizSpellValue;
 

@@ -1,9 +1,9 @@
 package RoomsAndBunnies.Enums;
 
 public enum Axe {
-    BATTLEAXE(300),
-    TOMAHAWK(150),
-    DANEAXE(400);
+    BATTLEAXE(90),
+    TOMAHAWK(80),
+    DANEAXE(70);
 
     private final int axeValue;
 

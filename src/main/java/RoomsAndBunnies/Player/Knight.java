@@ -8,7 +8,7 @@ public class Knight extends Warrior implements IAttack, IDefend {
     private Sword sword;
 
     public Knight(String name, int treasury, Sword sword){
-        super(name, "Knight", 75, treasury, 100);
+        super(name, "Knight", 75, treasury, 80);
         this.sword = sword;
     }
 

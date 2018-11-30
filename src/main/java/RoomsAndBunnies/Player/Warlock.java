@@ -34,7 +34,7 @@ public class Warlock extends Magician implements IAttack, IDefend {
 
 
     public void attack(IDefend iDefend){
-        int damage = undead.getUndeadValue();
+        int damage = warSpell.getWarSpellValue();
         iDefend.defend(damage);
     }
 

@@ -34,7 +34,7 @@ public class Wizzard extends Magician implements IAttack, IDefend {
 
 
     public void attack(IDefend iDefend){
-        int damage = dragon.getDragonValue();
+        int damage = wizSpell.getWizSpellValue();
         iDefend.defend(damage);
     }
 
