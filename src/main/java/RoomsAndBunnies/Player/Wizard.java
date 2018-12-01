@@ -6,13 +6,13 @@ import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
 
-public class Wizzard extends Magician implements IAttack, IDefend, IRecover {
+public class Wizard extends Magician implements IAttack, IDefend, IRecover {
 
     WizSpell wizSpell;
     Dragon dragon;
 
-    public Wizzard(String name, int treasury, WizSpell wizSpell, Dragon dragon){
-        super(name, "Wizzard", 200, treasury);
+    public Wizard(String name, int treasury, WizSpell wizSpell, Dragon dragon){
+        super(name, "Wizard", 200, treasury);
         this.wizSpell = wizSpell;
         this.dragon = dragon;
     }

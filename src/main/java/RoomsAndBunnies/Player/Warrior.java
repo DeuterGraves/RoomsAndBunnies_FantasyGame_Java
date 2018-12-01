@@ -1,7 +1,5 @@
 package RoomsAndBunnies.Player;
 
-import RoomsAndBunnies.Interfaces.ICollect;
-import RoomsAndBunnies.Interfaces.IEnter;
 import RoomsAndBunnies.Rooms.GoodRoom;
 import RoomsAndBunnies.Rooms.Room;
 

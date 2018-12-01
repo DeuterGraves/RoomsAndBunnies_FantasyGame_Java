@@ -13,7 +13,7 @@ public class PlayerTest {
     Enemy enemy;
     Knight knight;
     Warlock warlock;
-    Wizzard wizzard;
+    Wizard wizard;
     Cleric cleric;
     GoodRoom goodRoom;
 
@@ -30,7 +30,7 @@ public class PlayerTest {
 //        warlock = hp100 zombie = -75 evilcurse = 10
         warlock = new Warlock("Donnie Darko", 400, Undead.ZOMBIE, WarSpell.EVILCURSE);
 //        wizard 200hp wind = 500 purple = 75
-        wizzard = new Wizzard("Whiz Zard", 200, WizSpell.WIND, Dragon.PURPLE);
+        wizard = new Wizard("Whiz Zard", 200, WizSpell.WIND, Dragon.PURPLE);
         cleric = new Cleric("Maud", "Cleric", 300, Potion.POTION1, 150);
         goodRoom = new GoodRoom("Money Storage", 1000);
     }
@@ -67,13 +67,13 @@ public class PlayerTest {
 
     @Test
     public void warlockCanAttackWizard(){
-        warlock.attack(wizzard);
+        warlock.attack(wizard);
 //        -75 - 75 = -150 damage
-        assertEquals(265, wizzard.getHealthPoints());
+        assertEquals(265, wizard.getHealthPoints());
     }
     /*
     warlock weapon = 10
-    wizzard defence = 75
+    wizard defence = 75
     wizard hp = 200
 
     damage = 10 - 75 = -65
@@ -82,7 +82,7 @@ public class PlayerTest {
 
     @Test
     public void wizzardCanAttackWarlock(){
-        wizzard.attack(warlock);
+        wizard.attack(warlock);
 //        wind 50 + 75 125 damage -25
         assertEquals(-25, warlock.getHealthPoints());
     }
@@ -121,8 +121,8 @@ public class PlayerTest {
 
     @Test
     public void clericCanHealWizard(){
-        cleric.heal(wizzard);
-        assertEquals(220, wizzard.getHealthPoints());
+        cleric.heal(wizard);
+        assertEquals(220, wizard.getHealthPoints());
     }
 
     @Test
@@ -174,10 +174,10 @@ public class PlayerTest {
 
     @Test
     public void wizardTakesTreasure(){
-        wizzard.enterRoom(goodRoom);
-        wizzard.collectTreasure(goodRoom);
+        wizard.enterRoom(goodRoom);
+        wizard.collectTreasure(goodRoom);
         assertEquals(0, goodRoom.getTreasure());
-        assertEquals(1200, wizzard.getTreasury());
+        assertEquals(1200, wizard.getTreasury());
     }
 
 

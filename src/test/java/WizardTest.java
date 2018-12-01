@@ -1,41 +1,41 @@
 import RoomsAndBunnies.Enums.Dragon;
 import RoomsAndBunnies.Enums.WizSpell;
-import RoomsAndBunnies.Player.Wizzard;
+import RoomsAndBunnies.Player.Wizard;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class WizzardTest {
+public class WizardTest {
 
     WizSpell wizSpell;
-    Wizzard wizzard;
+    Wizard wizard;
     Dragon dragon;
 
     @Before
     public void before(){
         dragon = Dragon.BLUE;
         wizSpell = WizSpell.WIND;
-        wizzard = new Wizzard("Merlin", 0, wizSpell, dragon);
+        wizard = new Wizard("Merlin", 0, wizSpell, dragon);
     }
 
     @Test
     public void wizzardHasDragon(){
-        assertEquals(dragon, wizzard.getDragon());
+        assertEquals(dragon, wizard.getDragon());
     }
 
     @Test
     public void wizzardDragonHealth(){
-        assertEquals(100, wizzard.getDragonHealth());
+        assertEquals(100, wizard.getDragonHealth());
     }
 
     @Test
     public void wizzardHasSpell(){
-        assertEquals(wizSpell, wizzard.getWizSpell());
+        assertEquals(wizSpell, wizard.getWizSpell());
     }
 
     @Test
     public void wizzardSpellValue(){
-        assertEquals(50, wizzard.getWizSpellValue());
+        assertEquals(50, wizard.getWizSpellValue());
     }
 }
