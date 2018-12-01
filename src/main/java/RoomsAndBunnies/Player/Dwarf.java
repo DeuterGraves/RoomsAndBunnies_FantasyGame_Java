@@ -2,8 +2,10 @@ package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Enums.Axe;
 import RoomsAndBunnies.Interfaces.IAttack;
+import RoomsAndBunnies.Interfaces.ICollect;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
+import RoomsAndBunnies.Rooms.GoodRoom;
 
 public class Dwarf extends Warrior implements IDefend, IAttack, IRecover {
 

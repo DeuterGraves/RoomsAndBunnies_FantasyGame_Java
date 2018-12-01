@@ -132,12 +132,53 @@ public class PlayerTest {
     }
 
     @Test
-    public void playerTakesTreasure(){
-//        room gets the player - but shouldn't we write something for thep layer to enter the room?
+    public void knightTakesTreasure(){
         knight.enterRoom(goodRoom);
         knight.collectTreasure(goodRoom);
         assertEquals(0, goodRoom.getTreasure());
         assertEquals(1800, knight.getTreasury());
     }
+
+    @Test
+    public void barbarianTakesTreasure(){
+        barbarian.enterRoom(goodRoom);
+        barbarian.collectTreasure(goodRoom);
+        assertEquals(0, goodRoom.getTreasure());
+        assertEquals(1150, barbarian.getTreasury());
+    }
+
+    @Test
+    public void dwarfTakesTreasure(){
+        dwarf.enterRoom(goodRoom);
+        dwarf.collectTreasure(goodRoom);
+        assertEquals(0, goodRoom.getTreasure());
+        assertEquals(1400, dwarf.getTreasury());
+    }
+
+    @Test
+    public void clericTakesTreasure(){
+        cleric.enterRoom(goodRoom);
+        cleric.collectTreasure(goodRoom);
+        assertEquals(0, goodRoom.getTreasure());
+        assertEquals(1150, cleric.getTreasury());
+    }
+
+    @Test
+    public void warlockTakesTreasure(){
+        warlock.enterRoom(goodRoom);
+        warlock.collectTreasure(goodRoom);
+        assertEquals(0, goodRoom.getTreasure());
+        assertEquals(1400, warlock.getTreasury());
+    }
+
+
+    @Test
+    public void wizardTakesTreasure(){
+        wizzard.enterRoom(goodRoom);
+        wizzard.collectTreasure(goodRoom);
+        assertEquals(0, goodRoom.getTreasure());
+        assertEquals(1200, wizzard.getTreasury());
+    }
+
 
 }
