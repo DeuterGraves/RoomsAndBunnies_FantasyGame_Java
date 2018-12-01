@@ -1,5 +1,6 @@
 import RoomsAndBunnies.Enums.*;
 import RoomsAndBunnies.Player.*;
+import RoomsAndBunnies.Rooms.GoodRoom;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,6 +15,7 @@ public class PlayerTest {
     Warlock warlock;
     Wizzard wizzard;
     Cleric cleric;
+    GoodRoom goodRoom;
 
     @Before
     public void before(){
@@ -30,6 +32,7 @@ public class PlayerTest {
 //        wizard 200hp wind = 500 purple = 75
         wizzard = new Wizzard("Whiz Zard", 200, WizSpell.WIND, Dragon.PURPLE);
         cleric = new Cleric("Maud", "Cleric", 300, Potion.POTION1, 150);
+        goodRoom = new GoodRoom("Money Storage", 1000);
     }
 
     //    BATTLE!!!!
@@ -120,6 +123,21 @@ public class PlayerTest {
     public void clericCanHealWizard(){
         cleric.heal(wizzard);
         assertEquals(220, wizzard.getHealthPoints());
+    }
+
+    @Test
+    public void knightEntersRoom(){
+        knight.enterRoom(goodRoom);
+        assertEquals(knight, goodRoom.getPlayer());
+    }
+
+    @Test
+    public void playerTakesTreasure(){
+//        room gets the player - but shouldn't we write something for thep layer to enter the room?
+        knight.enterRoom(goodRoom);
+        knight.collectTreasure(goodRoom);
+        assertEquals(0, goodRoom.getTreasure());
+        assertEquals(1800, knight.getTreasury());
     }
 
 }

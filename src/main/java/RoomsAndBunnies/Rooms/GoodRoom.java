@@ -12,4 +12,8 @@ public class GoodRoom extends Room {
     public int getTreasure(){
         return this.treasure;
     }
+
+    public void setTreasure(int newTreasure){
+        this.treasure = newTreasure;
+    }
 }

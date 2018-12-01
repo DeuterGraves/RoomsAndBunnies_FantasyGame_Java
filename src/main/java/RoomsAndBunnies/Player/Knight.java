@@ -2,10 +2,12 @@ package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Enums.Sword;
 import RoomsAndBunnies.Interfaces.IAttack;
+import RoomsAndBunnies.Interfaces.ICollect;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
+import RoomsAndBunnies.Rooms.GoodRoom;
 
-public class Knight extends Warrior implements IAttack, IDefend, IRecover {
+public class Knight extends Warrior implements IAttack, IDefend, IRecover, ICollect {
     private Sword sword;
 
     public Knight(String name, int treasury, Sword sword){
@@ -36,6 +38,13 @@ public class Knight extends Warrior implements IAttack, IDefend, IRecover {
 
     public void recover(int recoverPoints){
         this.healthPoints += recoverPoints;
+    }
+
+    public void collectTreasure(GoodRoom goodRoom){
+        int treasureValue = goodRoom.getTreasure();
+        this.treasury += treasureValue;
+        goodRoom.setTreasure(0);
+
     }
 
 

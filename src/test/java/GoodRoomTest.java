@@ -39,4 +39,6 @@ public class GoodRoomTest {
         assertEquals(500, goodRoom.getTreasure());
     }
 
+
+
 }

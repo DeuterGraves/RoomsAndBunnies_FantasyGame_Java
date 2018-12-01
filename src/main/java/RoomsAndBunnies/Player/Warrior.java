@@ -1,9 +1,12 @@
 package RoomsAndBunnies.Player;
 
-public abstract class Warrior extends Player {
+import RoomsAndBunnies.Interfaces.IEnter;
+import RoomsAndBunnies.Rooms.Room;
 
-    private int treasury;
-    private int armour;
+public abstract class Warrior extends Player implements IEnter {
+
+    protected int treasury;
+    protected int armour;
 
     public Warrior(String name, String type, int healthPoints, int treasury, int armour){
         super(name, type, healthPoints);
@@ -17,5 +20,9 @@ public abstract class Warrior extends Player {
 
     public int getArmour() {
         return this.armour;
+    }
+
+    public void enterRoom(Room room){
+        room.setPlayer(this);
     }
 }
