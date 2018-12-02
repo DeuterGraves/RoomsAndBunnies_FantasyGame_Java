@@ -25,6 +25,7 @@ public class PlayerTest {
     Sword sword;
     Undead undead;
     WarSpell warSpell;
+    WizSpell wizSpell;
 
     @Before
     public void before(){
@@ -36,6 +37,7 @@ public class PlayerTest {
         potion = new Potion(5, PotionType.POTION1);
         undead = new Undead(2, UndeadType.ZOMBIE);
         warSpell = new WarSpell(70, WarSpellType.EVILCURSE);
+        wizSpell = new WizSpell(2000, WizSpellType.WIND);
 //        truncheon = 60 barbarian = 100hp 25arm
         barbarian = new Barbarian("Conan", 150, club);
 //      tomahawk = 80 dwarf = 75hp 50arm
@@ -47,7 +49,7 @@ public class PlayerTest {
 //        warlock = hp100 zombie = -75 evilcurse = 10
         warlock = new Warlock("Donnie Darko", 400, undead, warSpell);
 //        wizard 200hp wind = 500 purple = 75
-        wizard = new Wizard("Whiz Zard", 200, WizSpellType.WIND, dragon);
+        wizard = new Wizard("Whiz Zard", 200, wizSpell, dragon);
         cleric = new Cleric("Maud", "Cleric", 300, potion, 150);
         goodRoom = new GoodRoom("Money Storage", 1000);
     }

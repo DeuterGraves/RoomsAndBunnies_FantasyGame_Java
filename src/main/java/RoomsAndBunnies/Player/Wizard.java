@@ -1,24 +1,24 @@
 package RoomsAndBunnies.Player;
 
-import RoomsAndBunnies.Enums.WizSpellType;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
 import RoomsAndBunnies.Weapons.Dragon;
+import RoomsAndBunnies.Weapons.WizSpell;
 
 public class Wizard extends Magician implements IAttack, IDefend, IRecover {
 
-    WizSpellType wizSpellType;
+    WizSpell wizSpell;
     Dragon dragon;
 
-    public Wizard(String name, int treasury, WizSpellType wizSpellType, Dragon dragon){
+    public Wizard(String name, int treasury, WizSpell wizSpell, Dragon dragon){
         super(name, "Wizard", 200, treasury);
-        this.wizSpellType = wizSpellType;
+        this.wizSpell = wizSpell;
         this.dragon = dragon;
     }
 
-    public WizSpellType getWizSpellType(){
-        return this.wizSpellType;
+    public WizSpell getWizSpell(){
+        return this.wizSpell;
     }
 
     public Dragon getDragon(){
@@ -30,12 +30,12 @@ public class Wizard extends Magician implements IAttack, IDefend, IRecover {
     }
 
     public int getWizSpellValue(){
-        return this.wizSpellType.getWizSpellValue();
+        return this.wizSpell.getWizSpellValue();
     }
 
 
     public void attack(IDefend iDefend){
-        int damage = wizSpellType.getWizSpellValue();
+        int damage = wizSpell.getWizSpellValue();
         iDefend.defend(damage);
     }
 
