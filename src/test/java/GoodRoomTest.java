@@ -1,6 +1,7 @@
 import RoomsAndBunnies.Enums.SwordType;
 import RoomsAndBunnies.Player.Knight;
 import RoomsAndBunnies.Rooms.GoodRoom;
+import RoomsAndBunnies.Weapons.Sword;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,12 +11,12 @@ public class GoodRoomTest {
 
     GoodRoom goodRoom;
     Knight knight;
-    SwordType swordType;
+    Sword sword;
 
     @Before
     public void before(){
-        swordType = SwordType.KNIGHTLYSWORD;
-        knight = new Knight("Sir Lance", 0, swordType);
+        sword = new Sword(800, SwordType.KNIGHTLYSWORD);
+        knight = new Knight("Sir Lance", 0, sword);
         goodRoom = new GoodRoom("Vault", 500);
     }
     @Test

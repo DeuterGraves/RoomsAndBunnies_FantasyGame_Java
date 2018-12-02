@@ -22,10 +22,12 @@ public class PlayerTest {
     Dragon dragon;
     EnemyWeapon enemyWeapon;
     Potion potion;
+    Sword sword;
 
     @Before
     public void before(){
         enemyWeapon = new EnemyWeapon(400, EnemyWeaponType.HUGEHAMMER);
+        sword = new Sword(800, SwordType.KNIGHTLYSWORD);
         dragon = new Dragon(74, DragonType.PURPLE );
         club = new Club(75, ClubType.TRUNCHEON);
         axe = new Axe(300, AxeType.TOMAHAWK);
@@ -37,7 +39,7 @@ public class PlayerTest {
 //        huge hammer = 50 hp 60 0arm
         enemy = new Enemy("Terrible Person", "Evil Dude", 60, enemyWeapon);
 //        knightly swordType = 60 hp75 armour80
-        knight = new Knight("Sir Sur", 800, SwordType.KNIGHTLYSWORD);
+        knight = new Knight("Sir Sur", 800, sword);
 //        warlock = hp100 zombie = -75 evilcurse = 10
         warlock = new Warlock("Donnie Darko", 400, UndeadType.ZOMBIE, WarSpellType.EVILCURSE);
 //        wizard 200hp wind = 500 purple = 75
