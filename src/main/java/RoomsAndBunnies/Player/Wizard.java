@@ -1,32 +1,32 @@
 package RoomsAndBunnies.Player;
 
-import RoomsAndBunnies.Enums.DragonType;
 import RoomsAndBunnies.Enums.WizSpellType;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
+import RoomsAndBunnies.Weapons.Dragon;
 
 public class Wizard extends Magician implements IAttack, IDefend, IRecover {
 
     WizSpellType wizSpellType;
-    DragonType dragonType;
+    Dragon dragon;
 
-    public Wizard(String name, int treasury, WizSpellType wizSpellType, DragonType dragonType){
+    public Wizard(String name, int treasury, WizSpellType wizSpellType, Dragon dragon){
         super(name, "Wizard", 200, treasury);
         this.wizSpellType = wizSpellType;
-        this.dragonType = dragonType;
+        this.dragon = dragon;
     }
 
     public WizSpellType getWizSpellType(){
         return this.wizSpellType;
     }
 
-    public DragonType getDragonType(){
-        return this.dragonType;
+    public Dragon getDragon(){
+        return this.dragon;
     }
 
     public int getDragonHealth(){
-        return this.dragonType.getDragonValue();
+        return this.dragon.getDragonValue();
     }
 
     public int getWizSpellValue(){

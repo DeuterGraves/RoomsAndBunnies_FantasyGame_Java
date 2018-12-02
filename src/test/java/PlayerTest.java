@@ -3,6 +3,7 @@ import RoomsAndBunnies.Player.*;
 import RoomsAndBunnies.Rooms.GoodRoom;
 import RoomsAndBunnies.Weapons.Axe;
 import RoomsAndBunnies.Weapons.Club;
+import RoomsAndBunnies.Weapons.Dragon;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,9 +21,11 @@ public class PlayerTest {
     GoodRoom goodRoom;
     Axe axe;
     Club club;
+    Dragon dragon;
 
     @Before
     public void before(){
+        dragon = new Dragon(74, DragonType.PURPLE );
         club = new Club(75, ClubType.TRUNCHEON);
         axe = new Axe(300, AxeType.TOMAHAWK);
 //        truncheon = 60 barbarian = 100hp 25arm
@@ -36,7 +39,7 @@ public class PlayerTest {
 //        warlock = hp100 zombie = -75 evilcurse = 10
         warlock = new Warlock("Donnie Darko", 400, UndeadType.ZOMBIE, WarSpellType.EVILCURSE);
 //        wizard 200hp wind = 500 purple = 75
-        wizard = new Wizard("Whiz Zard", 200, WizSpellType.WIND, DragonType.PURPLE);
+        wizard = new Wizard("Whiz Zard", 200, WizSpellType.WIND, dragon);
         cleric = new Cleric("Maud", "Cleric", 300, PotionType.POTION1, 150);
         goodRoom = new GoodRoom("Money Storage", 1000);
     }
