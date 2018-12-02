@@ -1,32 +1,33 @@
 package RoomsAndBunnies.Player;
 
-import RoomsAndBunnies.Enums.WarSpellType;
+//import RoomsAndBunnies.Enums.WarSpell;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
 import RoomsAndBunnies.Weapons.Undead;
+import RoomsAndBunnies.Weapons.WarSpell;
 
 public class Warlock extends Magician implements IAttack, IDefend, IRecover {
 
     Undead undead;
-    WarSpellType warSpellType;
+    WarSpell warSpell;
 
-    public Warlock(String name, int treasury, Undead undead, WarSpellType warSpellType){
+    public Warlock(String name, int treasury, Undead undead, WarSpell warSpell){
         super(name, "Warlock", 100, treasury);
         this.undead = undead;
-        this.warSpellType = warSpellType;
+        this.warSpell = warSpell;
     }
 
     public Undead getUndead() {
         return this.undead;
     }
 
-    public WarSpellType getWarSpellType(){
-        return this.warSpellType;
+    public WarSpell getWarSpell(){
+        return this.warSpell;
     }
 
     public int getWarSpellValue(){
-        return this.warSpellType.getWarSpellValue();
+        return this.warSpell.getWarSpellValue();
     }
 
     public int getUndeadValue(){
@@ -35,7 +36,7 @@ public class Warlock extends Magician implements IAttack, IDefend, IRecover {
 
 
     public void attack(IDefend iDefend){
-        int damage = warSpellType.getWarSpellValue();
+        int damage = warSpell.getWarSpellValue();
         iDefend.defend(damage);
     }
 

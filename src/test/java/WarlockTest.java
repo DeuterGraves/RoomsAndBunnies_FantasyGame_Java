@@ -2,6 +2,7 @@ import RoomsAndBunnies.Enums.UndeadType;
 import RoomsAndBunnies.Enums.WarSpellType;
 import RoomsAndBunnies.Player.Warlock;
 import RoomsAndBunnies.Weapons.Undead;
+import RoomsAndBunnies.Weapons.WarSpell;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,14 +11,14 @@ import static org.junit.Assert.assertEquals;
 public class WarlockTest {
 
     Warlock warlock;
-    WarSpellType warSpellType;
+    WarSpell warSpell;
     Undead undead;
 
     @Before
     public void before(){
         undead = new Undead(2, UndeadType.GOUL);
-        warSpellType = WarSpellType.EVILCURSE;
-        warlock = new Warlock("Anadane", 0, undead, warSpellType);
+        warSpell = new WarSpell(15, WarSpellType.EVILCURSE);
+        warlock = new Warlock("Anadane", 0, undead, warSpell);
     }
 
     @Test
@@ -27,7 +28,7 @@ public class WarlockTest {
 
     @Test
     public void hasWarSpell(){
-        assertEquals(warSpellType, warlock.getWarSpellType());
+        assertEquals(warSpell, warlock.getWarSpell());
     }
 
     @Test
