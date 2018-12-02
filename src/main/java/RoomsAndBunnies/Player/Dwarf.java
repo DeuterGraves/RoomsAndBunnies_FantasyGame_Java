@@ -4,26 +4,28 @@ import RoomsAndBunnies.Enums.AxeType;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
+import RoomsAndBunnies.Weapons.Axe;
 
 public class Dwarf extends Warrior implements IDefend, IAttack, IRecover {
 
-    private AxeType axeType;
+//    private AxeType axeType;
+    private Axe axe;
 
-    public Dwarf(String name, int treasury, AxeType axeType){
+    public Dwarf(String name, int treasury, Axe axe){
         super(name, "Dwarf", 75, treasury, 50);
-        this.axeType = axeType;
+        this.axe = axe;
     }
 
-    public AxeType getAxeType() {
-        return this.axeType;
+    public Axe getAxe() {
+        return this.axe;
     }
 
     public int getAxeValue(){
-        return this.axeType.getAxeValue();
+        return this.axe.getAxeValue();
     }
 
     public void attack(IDefend iDefend){
-        int damage = axeType.getAxeValue();
+        int damage = axe.getAxeValue();
         iDefend.defend(damage);
 
     }

@@ -1,5 +1,6 @@
 import RoomsAndBunnies.Enums.AxeType;
 import RoomsAndBunnies.Player.Dwarf;
+import RoomsAndBunnies.Weapons.Axe;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,18 +8,18 @@ import static org.junit.Assert.assertEquals;
 
 public class DwarfTest {
 
-    AxeType axeType;
+    Axe axe;
     Dwarf dwarf;
 
     @Before
     public void before(){
-        axeType = AxeType.DANEAXE;
-        dwarf = new Dwarf("Red", 0, axeType);
+        axe = new Axe(200, AxeType.DANEAXE);
+        dwarf = new Dwarf("Red", 0, axe);
     }
 
     @Test
     public void dwarfHasAxe(){
-        assertEquals(axeType, dwarf.getAxeType());
+        assertEquals(axe, dwarf.getAxe());
     }
 
     @Test

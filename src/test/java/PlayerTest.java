@@ -1,6 +1,7 @@
 import RoomsAndBunnies.Enums.*;
 import RoomsAndBunnies.Player.*;
 import RoomsAndBunnies.Rooms.GoodRoom;
+import RoomsAndBunnies.Weapons.Axe;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,13 +17,15 @@ public class PlayerTest {
     Wizard wizard;
     Cleric cleric;
     GoodRoom goodRoom;
+    Axe axe;
 
     @Before
     public void before(){
+        axe = new Axe(300, AxeType.TOMAHAWK);
 //        truncheon = 60 barbarian = 100hp 25arm
         barbarian = new Barbarian("Conan", 150, ClubType.TRUNCHEON);
 //      tomahawk = 80 dwarf = 75hp 50arm
-        dwarf = new Dwarf("Shorty", 400, AxeType.TOMAHAWK);
+        dwarf = new Dwarf("Shorty", 400, axe);
 //        huge hammer = 50 hp 60 0arm
         enemy = new Enemy("Terrible Person", "Evil Dude", 60, EnemyWeaponType.HUGEHAMMER);
 //        knightly swordType = 60 hp75 armour80

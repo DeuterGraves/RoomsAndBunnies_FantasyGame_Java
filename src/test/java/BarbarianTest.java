@@ -2,6 +2,7 @@ import RoomsAndBunnies.Enums.AxeType;
 import RoomsAndBunnies.Enums.ClubType;
 import RoomsAndBunnies.Player.Barbarian;
 import RoomsAndBunnies.Player.Dwarf;
+import RoomsAndBunnies.Weapons.Axe;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,14 +14,14 @@ public class BarbarianTest {
     ClubType clubType;
     Barbarian barbarian;
     Dwarf dwarf;
-    AxeType axeType;
+    Axe axe;
 
     @Before
     public void before(){
         clubType = ClubType.NULLANULLA;
         barbarian = new Barbarian("Conan", 0, clubType);
-        axeType = AxeType.DANEAXE;
-        dwarf = new Dwarf("Red", 0, axeType);
+        axe = new Axe(200, AxeType.DANEAXE);
+        dwarf = new Dwarf("Red", 0, axe);
     }
 
     @Test
