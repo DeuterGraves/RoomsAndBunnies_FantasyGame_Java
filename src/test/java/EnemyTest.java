@@ -1,6 +1,7 @@
 
 import RoomsAndBunnies.Enums.EnemyWeaponType;
 import RoomsAndBunnies.Player.Enemy;
+import RoomsAndBunnies.Weapons.EnemyWeapon;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,14 +9,14 @@ import static org.junit.Assert.assertEquals;
 
 public class EnemyTest {
 
-    EnemyWeaponType enemyWeaponType;
+    EnemyWeapon enemyWeapon;
     Enemy enemy;
 
 
     @Before
     public void before(){
-        enemyWeaponType = EnemyWeaponType.GUILLOTINE;
-        enemy = new Enemy("Harold", "Orc", 20, enemyWeaponType);
+        enemyWeapon = new EnemyWeapon(400, EnemyWeaponType.GUILLOTINE);
+        enemy = new Enemy("Harold", "Orc", 20, enemyWeapon);
     }
 
     @Test
@@ -35,7 +36,7 @@ public class EnemyTest {
 
     @Test
     public void enemyHasAWeapon(){
-        assertEquals(enemyWeaponType, enemy.getEnemyWeaponType());
+        assertEquals(enemyWeapon, enemy.getEnemyWeapon());
     }
 
     @Test

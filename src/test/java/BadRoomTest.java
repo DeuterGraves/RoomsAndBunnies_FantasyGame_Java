@@ -4,6 +4,7 @@ import RoomsAndBunnies.Player.Barbarian;
 import RoomsAndBunnies.Player.Enemy;
 import RoomsAndBunnies.Rooms.BadRoom;
 import RoomsAndBunnies.Weapons.Club;
+import RoomsAndBunnies.Weapons.EnemyWeapon;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,14 +16,14 @@ public class BadRoomTest {
     Barbarian barbarian;
     Club club;
     Enemy enemy;
-    EnemyWeaponType enemyWeaponType;
+    EnemyWeapon enemyWeapon;
 
     @Before
     public void before(){
         club = new Club(150, ClubType.AKLYS);
-        enemyWeaponType = EnemyWeaponType.GUILLOTINE;
+        enemyWeapon = new EnemyWeapon(1000, EnemyWeaponType.GUILLOTINE);
         barbarian = new Barbarian("Conan", 0, club);
-        enemy = new Enemy("Steve", "Orc", 50, enemyWeaponType);
+        enemy = new Enemy("Steve", "Orc", 50, enemyWeapon);
         badRoom = new BadRoom("Dungeon", enemy);
     }
 

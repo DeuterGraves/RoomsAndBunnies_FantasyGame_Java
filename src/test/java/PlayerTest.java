@@ -4,6 +4,7 @@ import RoomsAndBunnies.Rooms.GoodRoom;
 import RoomsAndBunnies.Weapons.Axe;
 import RoomsAndBunnies.Weapons.Club;
 import RoomsAndBunnies.Weapons.Dragon;
+import RoomsAndBunnies.Weapons.EnemyWeapon;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,9 +23,11 @@ public class PlayerTest {
     Axe axe;
     Club club;
     Dragon dragon;
+    EnemyWeapon enemyWeapon;
 
     @Before
     public void before(){
+        enemyWeapon = new EnemyWeapon(400, EnemyWeaponType.HUGEHAMMER);
         dragon = new Dragon(74, DragonType.PURPLE );
         club = new Club(75, ClubType.TRUNCHEON);
         axe = new Axe(300, AxeType.TOMAHAWK);
@@ -33,7 +36,7 @@ public class PlayerTest {
 //      tomahawk = 80 dwarf = 75hp 50arm
         dwarf = new Dwarf("Shorty", 400, axe);
 //        huge hammer = 50 hp 60 0arm
-        enemy = new Enemy("Terrible Person", "Evil Dude", 60, EnemyWeaponType.HUGEHAMMER);
+        enemy = new Enemy("Terrible Person", "Evil Dude", 60, enemyWeapon);
 //        knightly swordType = 60 hp75 armour80
         knight = new Knight("Sir Sur", 800, SwordType.KNIGHTLYSWORD);
 //        warlock = hp100 zombie = -75 evilcurse = 10
