@@ -3,6 +3,7 @@ import RoomsAndBunnies.Enums.ClubType;
 import RoomsAndBunnies.Player.Barbarian;
 import RoomsAndBunnies.Player.Dwarf;
 import RoomsAndBunnies.Weapons.Axe;
+import RoomsAndBunnies.Weapons.Club;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,22 +12,22 @@ import static org.junit.Assert.assertEquals;
 
 public class BarbarianTest {
 
-    ClubType clubType;
+    Club club;
     Barbarian barbarian;
     Dwarf dwarf;
     Axe axe;
 
     @Before
     public void before(){
-        clubType = ClubType.NULLANULLA;
-        barbarian = new Barbarian("Conan", 0, clubType);
+        club = new Club(300, ClubType.NULLANULLA);
+        barbarian = new Barbarian("Conan", 0, club);
         axe = new Axe(200, AxeType.DANEAXE);
         dwarf = new Dwarf("Red", 0, axe);
     }
 
     @Test
     public void barbarianHasClub(){
-        assertEquals(clubType, barbarian.getClubType());
+        assertEquals(club, barbarian.getClub());
     }
 
     @Test
