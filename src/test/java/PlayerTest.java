@@ -1,10 +1,7 @@
 import RoomsAndBunnies.Enums.*;
 import RoomsAndBunnies.Player.*;
 import RoomsAndBunnies.Rooms.GoodRoom;
-import RoomsAndBunnies.Weapons.Axe;
-import RoomsAndBunnies.Weapons.Club;
-import RoomsAndBunnies.Weapons.Dragon;
-import RoomsAndBunnies.Weapons.EnemyWeapon;
+import RoomsAndBunnies.Weapons.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,6 +21,7 @@ public class PlayerTest {
     Club club;
     Dragon dragon;
     EnemyWeapon enemyWeapon;
+    Potion potion;
 
     @Before
     public void before(){
@@ -31,6 +29,7 @@ public class PlayerTest {
         dragon = new Dragon(74, DragonType.PURPLE );
         club = new Club(75, ClubType.TRUNCHEON);
         axe = new Axe(300, AxeType.TOMAHAWK);
+        potion = new Potion(5, PotionType.POTION1);
 //        truncheon = 60 barbarian = 100hp 25arm
         barbarian = new Barbarian("Conan", 150, club);
 //      tomahawk = 80 dwarf = 75hp 50arm
@@ -43,7 +42,7 @@ public class PlayerTest {
         warlock = new Warlock("Donnie Darko", 400, UndeadType.ZOMBIE, WarSpellType.EVILCURSE);
 //        wizard 200hp wind = 500 purple = 75
         wizard = new Wizard("Whiz Zard", 200, WizSpellType.WIND, dragon);
-        cleric = new Cleric("Maud", "Cleric", 300, PotionType.POTION1, 150);
+        cleric = new Cleric("Maud", "Cleric", 300, potion, 150);
         goodRoom = new GoodRoom("Money Storage", 1000);
     }
 
