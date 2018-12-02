@@ -1,13 +1,13 @@
 package RoomsAndBunnies.Enums;
 
-public enum Axe {
+public enum AxeType {
     BATTLEAXE(90),
     TOMAHAWK(80),
     DANEAXE(70);
 
     private final int axeValue;
 
-    Axe(int axeValue){
+    AxeType(int axeValue){
         this.axeValue = axeValue;
     }
 

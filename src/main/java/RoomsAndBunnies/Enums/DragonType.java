@@ -1,13 +1,13 @@
 package RoomsAndBunnies.Enums;
 
-public enum Dragon {
+public enum DragonType {
     BLUE(100),
     PURPLE(75),
     GREY(20);
 
     private final int dragonValue;
 
-    Dragon (int dragonValue){
+    DragonType(int dragonValue){
         this.dragonValue = dragonValue;
     }
 

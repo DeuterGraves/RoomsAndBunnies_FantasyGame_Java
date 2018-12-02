@@ -1,6 +1,6 @@
 package RoomsAndBunnies.Enums;
 
-public enum Sword {
+public enum SwordType {
     LONGSWORD(80),
     DAGGER(50),
     KNIGHTLYSWORD(60),
@@ -8,7 +8,7 @@ public enum Sword {
 
     private final int swordValue;
 
-    Sword(int swordValue){
+    SwordType(int swordValue){
         this.swordValue = swordValue;
     }
 

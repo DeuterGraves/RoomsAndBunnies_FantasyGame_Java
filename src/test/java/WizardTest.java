@@ -1,5 +1,5 @@
-import RoomsAndBunnies.Enums.Dragon;
-import RoomsAndBunnies.Enums.WizSpell;
+import RoomsAndBunnies.Enums.DragonType;
+import RoomsAndBunnies.Enums.WizSpellType;
 import RoomsAndBunnies.Player.Wizard;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,20 +8,20 @@ import static org.junit.Assert.assertEquals;
 
 public class WizardTest {
 
-    WizSpell wizSpell;
+    WizSpellType wizSpellType;
     Wizard wizard;
-    Dragon dragon;
+    DragonType dragonType;
 
     @Before
     public void before(){
-        dragon = Dragon.BLUE;
-        wizSpell = WizSpell.WIND;
-        wizard = new Wizard("Merlin", 0, wizSpell, dragon);
+        dragonType = DragonType.BLUE;
+        wizSpellType = WizSpellType.WIND;
+        wizard = new Wizard("Merlin", 0, wizSpellType, dragonType);
     }
 
     @Test
     public void wizzardHasDragon(){
-        assertEquals(dragon, wizard.getDragon());
+        assertEquals(dragonType, wizard.getDragonType());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class WizardTest {
 
     @Test
     public void wizzardHasSpell(){
-        assertEquals(wizSpell, wizard.getWizSpell());
+        assertEquals(wizSpellType, wizard.getWizSpellType());
     }
 
     @Test

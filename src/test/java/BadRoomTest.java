@@ -1,5 +1,5 @@
-import RoomsAndBunnies.Enums.Club;
-import RoomsAndBunnies.Enums.EnemyWeapon;
+import RoomsAndBunnies.Enums.ClubType;
+import RoomsAndBunnies.Enums.EnemyWeaponType;
 import RoomsAndBunnies.Player.Barbarian;
 import RoomsAndBunnies.Player.Enemy;
 import RoomsAndBunnies.Rooms.BadRoom;
@@ -12,16 +12,16 @@ public class BadRoomTest {
 
     BadRoom badRoom;
     Barbarian barbarian;
-    Club club;
+    ClubType clubType;
     Enemy enemy;
-    EnemyWeapon enemyWeapon;
+    EnemyWeaponType enemyWeaponType;
 
     @Before
     public void before(){
-        club = Club.AKLYS;
-        enemyWeapon = EnemyWeapon.GUILLOTINE;
-        barbarian = new Barbarian("Conan", 0, club);
-        enemy = new Enemy("Steve", "Orc", 50,enemyWeapon);
+        clubType = ClubType.AKLYS;
+        enemyWeaponType = EnemyWeaponType.GUILLOTINE;
+        barbarian = new Barbarian("Conan", 0, clubType);
+        enemy = new Enemy("Steve", "Orc", 50, enemyWeaponType);
         badRoom = new BadRoom("Dungeon", enemy);
     }
 

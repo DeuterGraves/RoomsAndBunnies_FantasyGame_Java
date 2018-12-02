@@ -1,13 +1,13 @@
 package RoomsAndBunnies.Enums;
 
-public enum Potion {
+public enum PotionType {
     POTION1(20),
     POTION2(10),
     POTION3(30);
 
     private final int potionValue;
 
-    Potion(int potionValue){
+    PotionType(int potionValue){
         this.potionValue = potionValue;
     }
 

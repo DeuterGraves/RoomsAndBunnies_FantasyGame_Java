@@ -1,4 +1,4 @@
-import RoomsAndBunnies.Enums.Sword;
+import RoomsAndBunnies.Enums.SwordType;
 import RoomsAndBunnies.Player.Knight;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,18 +7,18 @@ import static org.junit.Assert.assertEquals;
 
 public class KnightTest {
 
-    Sword sword;
+    SwordType swordType;
     Knight knight;
 
     @Before
     public void before(){
-        sword = Sword.KNIGHTLYSWORD;
-        knight = new Knight("Sir Lancelot", 0, sword);
+        swordType = SwordType.KNIGHTLYSWORD;
+        knight = new Knight("Sir Lancelot", 0, swordType);
     }
 
     @Test
     public void knightHasSword(){
-        assertEquals(sword, knight.getSword());
+        assertEquals(swordType, knight.getSwordType());
     }
 
     @Test

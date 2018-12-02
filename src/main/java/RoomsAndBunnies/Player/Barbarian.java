@@ -1,31 +1,29 @@
 package RoomsAndBunnies.Player;
 
-import RoomsAndBunnies.Enums.Club;
+import RoomsAndBunnies.Enums.ClubType;
 import RoomsAndBunnies.Interfaces.IAttack;
-import RoomsAndBunnies.Interfaces.ICollect;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
-import RoomsAndBunnies.Rooms.GoodRoom;
 
 public class Barbarian extends Warrior implements IAttack, IDefend, IRecover {
 
-    private Club club;
+    private ClubType clubType;
 
-    public Barbarian(String name, int treasury, Club club){
+    public Barbarian(String name, int treasury, ClubType clubType){
         super(name, "Barbarian", 100, treasury, 25);
-        this.club = club;
+        this.clubType = clubType;
     }
 
-    public Club getClub() {
-        return this.club;
+    public ClubType getClubType() {
+        return this.clubType;
     }
 
     public int getClubValue(){
-        return this.club.getClubValue();
+        return this.clubType.getClubValue();
     }
 
     public void attack(IDefend iDefend){
-        int damage = club.getClubValue();
+        int damage = clubType.getClubValue();
         iDefend.defend(damage);
 
     }

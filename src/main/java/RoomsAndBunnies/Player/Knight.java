@@ -1,31 +1,29 @@
 package RoomsAndBunnies.Player;
 
-import RoomsAndBunnies.Enums.Sword;
+import RoomsAndBunnies.Enums.SwordType;
 import RoomsAndBunnies.Interfaces.IAttack;
-import RoomsAndBunnies.Interfaces.ICollect;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
-import RoomsAndBunnies.Rooms.GoodRoom;
 
 public class Knight extends Warrior implements IAttack, IDefend, IRecover {
-    private Sword sword;
+    private SwordType swordType;
 
-    public Knight(String name, int treasury, Sword sword){
+    public Knight(String name, int treasury, SwordType swordType){
         super(name, "Knight", 75, treasury, 80);
-        this.sword = sword;
+        this.swordType = swordType;
     }
 
-    public Sword getSword() {
-        return this.sword;
+    public SwordType getSwordType() {
+        return this.swordType;
     }
 
     public int getSwordValue(){
-        return this.sword.getSwordValue();
+        return this.swordType.getSwordValue();
     }
 
 
     public void attack(IDefend iDefend){
-        int damage = sword.getSwordValue();
+        int damage = swordType.getSwordValue();
         iDefend.defend(damage);
     }
 

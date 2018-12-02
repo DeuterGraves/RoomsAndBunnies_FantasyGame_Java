@@ -1,4 +1,4 @@
-import RoomsAndBunnies.Enums.Potion;
+import RoomsAndBunnies.Enums.PotionType;
 import RoomsAndBunnies.Player.Cleric;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,13 +8,13 @@ import static org.junit.Assert.assertEquals;
 public class ClericTest {
 
     Cleric cleric;
-    Potion potion;
+    PotionType potionType;
 
 
     @Before
     public void before(){
-        potion = Potion.POTION1;
-        cleric = new Cleric("bob", "magic", 2000, potion, 0);
+        potionType = PotionType.POTION1;
+        cleric = new Cleric("bob", "magic", 2000, potionType, 0);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class ClericTest {
 
     @Test
     public void clericHasAPotion(){
-        assertEquals(potion, cleric.getPotion());
+        assertEquals(potionType, cleric.getPotionType());
     }
 
     @Test

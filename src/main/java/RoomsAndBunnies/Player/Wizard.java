@@ -1,41 +1,41 @@
 package RoomsAndBunnies.Player;
 
-import RoomsAndBunnies.Enums.Dragon;
-import RoomsAndBunnies.Enums.WizSpell;
+import RoomsAndBunnies.Enums.DragonType;
+import RoomsAndBunnies.Enums.WizSpellType;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
 import RoomsAndBunnies.Interfaces.IRecover;
 
 public class Wizard extends Magician implements IAttack, IDefend, IRecover {
 
-    WizSpell wizSpell;
-    Dragon dragon;
+    WizSpellType wizSpellType;
+    DragonType dragonType;
 
-    public Wizard(String name, int treasury, WizSpell wizSpell, Dragon dragon){
+    public Wizard(String name, int treasury, WizSpellType wizSpellType, DragonType dragonType){
         super(name, "Wizard", 200, treasury);
-        this.wizSpell = wizSpell;
-        this.dragon = dragon;
+        this.wizSpellType = wizSpellType;
+        this.dragonType = dragonType;
     }
 
-    public WizSpell getWizSpell(){
-        return this.wizSpell;
+    public WizSpellType getWizSpellType(){
+        return this.wizSpellType;
     }
 
-    public Dragon getDragon(){
-        return this.dragon;
+    public DragonType getDragonType(){
+        return this.dragonType;
     }
 
     public int getDragonHealth(){
-        return this.dragon.getDragonValue();
+        return this.dragonType.getDragonValue();
     }
 
     public int getWizSpellValue(){
-        return this.wizSpell.getWizSpellValue();
+        return this.wizSpellType.getWizSpellValue();
     }
 
 
     public void attack(IDefend iDefend){
-        int damage = wizSpell.getWizSpellValue();
+        int damage = wizSpellType.getWizSpellValue();
         iDefend.defend(damage);
     }
 

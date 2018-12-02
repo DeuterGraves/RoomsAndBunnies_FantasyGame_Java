@@ -20,18 +20,18 @@ public class PlayerTest {
     @Before
     public void before(){
 //        truncheon = 60 barbarian = 100hp 25arm
-        barbarian = new Barbarian("Conan", 150, Club.TRUNCHEON);
+        barbarian = new Barbarian("Conan", 150, ClubType.TRUNCHEON);
 //      tomahawk = 80 dwarf = 75hp 50arm
-        dwarf = new Dwarf("Shorty", 400, Axe.TOMAHAWK);
+        dwarf = new Dwarf("Shorty", 400, AxeType.TOMAHAWK);
 //        huge hammer = 50 hp 60 0arm
-        enemy = new Enemy("Terrible Person", "Evil Dude", 60, EnemyWeapon.HUGEHAMMER);
-//        knightly sword = 60 hp75 armour80
-        knight = new Knight("Sir Sur", 800, Sword.KNIGHTLYSWORD);
+        enemy = new Enemy("Terrible Person", "Evil Dude", 60, EnemyWeaponType.HUGEHAMMER);
+//        knightly swordType = 60 hp75 armour80
+        knight = new Knight("Sir Sur", 800, SwordType.KNIGHTLYSWORD);
 //        warlock = hp100 zombie = -75 evilcurse = 10
-        warlock = new Warlock("Donnie Darko", 400, Undead.ZOMBIE, WarSpell.EVILCURSE);
+        warlock = new Warlock("Donnie Darko", 400, UndeadType.ZOMBIE, WarSpellType.EVILCURSE);
 //        wizard 200hp wind = 500 purple = 75
-        wizard = new Wizard("Whiz Zard", 200, WizSpell.WIND, Dragon.PURPLE);
-        cleric = new Cleric("Maud", "Cleric", 300, Potion.POTION1, 150);
+        wizard = new Wizard("Whiz Zard", 200, WizSpellType.WIND, DragonType.PURPLE);
+        cleric = new Cleric("Maud", "Cleric", 300, PotionType.POTION1, 150);
         goodRoom = new GoodRoom("Money Storage", 1000);
     }
 
