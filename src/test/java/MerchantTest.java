@@ -41,6 +41,7 @@ public class MerchantTest {
         merchant.addWeaponToInventory(dragon, 8);
         merchant.addWeaponToInventory(potion, 11);
         assertEquals(true, merchant.checkInventory(dragon));
+        assertEquals(true, merchant.checkInventory(axe));
         assertEquals(false, merchant.checkInventory(club));
     }
 
