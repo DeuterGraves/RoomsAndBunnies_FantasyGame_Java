@@ -3,10 +3,7 @@ import RoomsAndBunnies.Enums.ClubType;
 import RoomsAndBunnies.Enums.DragonType;
 import RoomsAndBunnies.Enums.PotionType;
 import RoomsAndBunnies.Player.Merchant;
-import RoomsAndBunnies.Weapons.Axe;
-import RoomsAndBunnies.Weapons.Club;
-import RoomsAndBunnies.Weapons.Dragon;
-import RoomsAndBunnies.Weapons.Potion;
+import RoomsAndBunnies.Weapons.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,6 +16,7 @@ public class MerchantTest {
     Club club;
     Dragon dragon;
     Potion potion;
+    Sword sword;
 
     @Before
     public void before(){
@@ -45,5 +43,20 @@ public class MerchantTest {
         assertEquals(false, merchant.checkInventory(club));
     }
 
+    @Test
+    public void canCheckInventoryForWeapon_present(){
+        merchant.addWeaponToInventory(axe, 5);
+        merchant.addWeaponToInventory(dragon, 8);
+        merchant.addWeaponToInventory(potion, 11);
+        assertEquals(true, merchant.checkInventory(dragon));
+    }
+
+    @Test
+    public void canCheckInventoryForWeapon_notPresent(){
+        merchant.addWeaponToInventory(axe, 5);
+        merchant.addWeaponToInventory(dragon, 8);
+        merchant.addWeaponToInventory(potion, 11);
+        assertEquals(false, merchant.checkInventory(sword));
+    }
 
 }
