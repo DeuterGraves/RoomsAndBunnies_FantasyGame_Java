@@ -2,6 +2,7 @@ package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IEnter;
 import RoomsAndBunnies.Weapons.EnemyWeapon;
 
 public class Enemy extends Player implements IAttack, IDefend {

@@ -38,7 +38,7 @@ public class Cleric extends Player implements IHeal, IEnter, ICollect {
     }
 
     public void enterRoom(Room room) {
-        room.setPlayer(this);
+        room.addPlayer(this);
     }
 
     public void collectTreasure(GoodRoom goodRoom){

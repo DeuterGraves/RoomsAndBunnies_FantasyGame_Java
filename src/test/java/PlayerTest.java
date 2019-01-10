@@ -147,7 +147,7 @@ public class PlayerTest {
     @Test
     public void knightEntersRoom(){
         knight.enterRoom(goodRoom);
-        assertEquals(knight, goodRoom.getPlayer());
+        assertEquals(knight, goodRoom.getPlayers());
     }
 
     @Test

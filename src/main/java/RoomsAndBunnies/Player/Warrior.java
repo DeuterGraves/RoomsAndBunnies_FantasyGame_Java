@@ -1,9 +1,10 @@
 package RoomsAndBunnies.Player;
 
+import RoomsAndBunnies.Interfaces.IEnter;
 import RoomsAndBunnies.Rooms.GoodRoom;
 import RoomsAndBunnies.Rooms.Room;
 
-public abstract class Warrior extends Player {
+public abstract class Warrior extends Player implements IEnter {
 
     protected int treasury;
     protected int armour;
@@ -23,7 +24,7 @@ public abstract class Warrior extends Player {
     }
 
     public void enterRoom(Room room){
-        room.setPlayer(this);
+        room.addPlayer(this);
     }
 
     public void collectTreasure(GoodRoom goodRoom){

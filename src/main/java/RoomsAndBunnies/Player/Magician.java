@@ -19,7 +19,7 @@ public abstract class Magician extends Player implements IEnter, ICollect {
     }
 
     public void enterRoom(Room room) {
-        room.setPlayer(this);
+        room.addPlayer(this);
     }
 
 

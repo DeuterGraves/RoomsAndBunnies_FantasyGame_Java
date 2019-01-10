@@ -3,11 +3,12 @@ package RoomsAndBunnies.Player;
 //import RoomsAndBunnies.Enums.WarSpell;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IEnter;
 import RoomsAndBunnies.Interfaces.IRecover;
 import RoomsAndBunnies.Weapons.Undead;
 import RoomsAndBunnies.Weapons.WarSpell;
 
-public class Warlock extends Magician implements IAttack, IDefend, IRecover {
+public class Warlock extends Magician implements IAttack, IDefend, IRecover, IEnter {
 
     Undead undead;
     WarSpell warSpell;

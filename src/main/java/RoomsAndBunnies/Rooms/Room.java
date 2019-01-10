@@ -1,27 +1,35 @@
 package RoomsAndBunnies.Rooms;
 
-import RoomsAndBunnies.Player.Player;
+import RoomsAndBunnies.Interfaces.IEnter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Room {
 
-    String name;
-    Player player;
+    protected String name;
+    protected List<IEnter> players;
 
     public Room(String name){
         this.name = name;
-        this.player = null;
+        this.players = new ArrayList<>();
     }
 
     public String getName(){
         return this.name;
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+
+    public List<IEnter> getPlayers() {
+        return players;
     }
 
-    public Player getPlayer(){
-        return this.player;
+    public void addPlayer(IEnter iEnter){
+        this.players.add(iEnter);
+    }
+
+    public int countPlayers(){
+        return this.players.size();
     }
 
 }

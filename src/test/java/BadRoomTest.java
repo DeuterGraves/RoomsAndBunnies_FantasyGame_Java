@@ -39,13 +39,13 @@ public class BadRoomTest {
 
     @Test
     public void roomHasNoPlayer(){
-        assertEquals(null, badRoom.getPlayer());
+        assertEquals(null, badRoom.getPlayers());
     }
 
     @Test
     public void canAddPlayer(){
-        badRoom.setPlayer(barbarian);
-        assertEquals(barbarian, badRoom.getPlayer());
+        badRoom.addPlayer(barbarian);
+        assertEquals(barbarian, badRoom.getPlayers());
     }
 
 }

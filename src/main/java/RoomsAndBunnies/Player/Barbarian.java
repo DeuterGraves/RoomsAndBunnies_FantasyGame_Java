@@ -2,10 +2,11 @@ package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IEnter;
 import RoomsAndBunnies.Interfaces.IRecover;
 import RoomsAndBunnies.Weapons.Club;
 
-public class Barbarian extends Warrior implements IAttack, IDefend, IRecover {
+public class Barbarian extends Warrior implements IAttack, IDefend, IRecover, IEnter {
 
     private Club club;
 

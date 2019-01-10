@@ -3,10 +3,11 @@ package RoomsAndBunnies.Player;
 import RoomsAndBunnies.Enums.AxeType;
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IEnter;
 import RoomsAndBunnies.Interfaces.IRecover;
 import RoomsAndBunnies.Weapons.Axe;
 
-public class Dwarf extends Warrior implements IDefend, IAttack, IRecover {
+public class Dwarf extends Warrior implements IDefend, IAttack, IRecover, IEnter {
 
 //    private AxeType axeType;
     private Axe axe;

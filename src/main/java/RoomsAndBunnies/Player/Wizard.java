@@ -2,11 +2,12 @@ package RoomsAndBunnies.Player;
 
 import RoomsAndBunnies.Interfaces.IAttack;
 import RoomsAndBunnies.Interfaces.IDefend;
+import RoomsAndBunnies.Interfaces.IEnter;
 import RoomsAndBunnies.Interfaces.IRecover;
 import RoomsAndBunnies.Weapons.Dragon;
 import RoomsAndBunnies.Weapons.WizSpell;
 
-public class Wizard extends Magician implements IAttack, IDefend, IRecover {
+public class Wizard extends Magician implements IAttack, IDefend, IRecover, IEnter {
 
     WizSpell wizSpell;
     Dragon dragon;
